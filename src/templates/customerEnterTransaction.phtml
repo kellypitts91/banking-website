@@ -1,0 +1,49 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=<?= $linkTo('customerIndex'); ?>>First National Bank</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href=<?= $linkTo('customerIndex'); ?>>Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="/../FirstNationalBank/" name="logout" class="btn" role="button"><span class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h3>Dashboard: <?= $_SESSION['first_name'];?> <?=$_SESSION['last_name'];?></h3>
+    <h3>Account ID: <?= $data[0];?>, Balance: $<?= $data[1]; ?></h3>
+    <div class="container">
+        <form action="/../FirstNationalBank/login/dashboard/submittransaction/" method="post">
+        <label>Required fields are marked with a *</label>
+            <div class="form-group">
+                <label>Account Number: *</label>
+                <input type="text" name="accNumber" required="required" value="<?=$accNum?>">
+            </div>
+            <div class="form-group">
+                <label>Amount: *</label>
+                <input type="number" step="0.01" name="amount" required="required" value="<?=$amount?>">
+            </div>
+            <div class="form-group">
+                <label class="withdraw">Withdrawl:</label>
+                <input type="radio" class="notInline radio" name="transactionType" value="Withdraw">
+            </div>
+            <div class="form-group">
+                <label class="deposit">Deposit:</label>
+                <input type="radio" class="notInline radio" name="transactionType" value="Deposit">
+            </div>
+            <div class="form-group">
+                <label>Description: </label>
+                <input type="text"  name="description" value="<?=$desc?>">
+            </div>
+
+            <button name="submitTransaction" type="submit" class="btn btn-default" value="submit">Submit Transaction</button>
+            <button name="submitTransaction" type="submit" class="btn btn-default" formnovalidate="formnovalidate">Cancel</button>
+        </form>
+    </div>
+
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

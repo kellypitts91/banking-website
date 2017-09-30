@@ -1,0 +1,53 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">First National Bank</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href=<?= $linkTo('customerRegister'); ?>><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href=<?= $linkTo('customerLogin'); ?>><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-div">
+        <h2>Loans</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Personal</a></li>
+        </ul>
+    </div>
+    <div class="main-div">
+        <h2>Find a branch</h2>
+        <ul class="two-columns">
+            <li><a href="#">Northland</a></li>
+            <li><a href="#">Auckland</a></li>
+            <li><a href="#">Waikato</a></li>
+            <li><a href="#">New Plymouth</a></li>
+            <li><a href="#">Wellington</a></li>
+            <li><a href="#">Nelson</a></li>
+            <li class="pad"><a href="#">Christchurch</a></li>
+            <li><a href="#">Timaru</a></li>
+            <li><a href="#">Queenstown</a></li>
+            <li><a href="#">Dunedin</a></li>
+            <li><a href="#">Invercargill</a></li>
+        </ul>
+    </div>
+    <div class="main-div">
+        <h2>Find out more about</h2>
+        <ul>
+            <li><a href="#">Credit cards</a></li>
+            <li><a href="#">Insurance</a></li>
+            <li><a href="#">KiwiSaver</a></li>
+            <li><a href="#">Fees & Interest</a></li>
+            <li><a href="#">Currency Conversion rates</a></li>
+        </ul>
+    </div>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

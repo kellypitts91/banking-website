@@ -1,0 +1,48 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <nav class="navbar navbar-inverse">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <a class="navbar-brand" href=<?= $linkTo('customerIndex'); ?>>First National Bank</a>
+           </div>
+           <ul class="nav navbar-nav">
+               <li><a href=<?= $linkTo('customerIndex'); ?>>Home</a></li>
+           </ul>
+           <ul class="nav navbar-nav navbar-right">
+              <li><a href="/../FirstNationalBank/" name="logout" class="btn" role="button"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+           </ul>
+       </div>
+    </nav>
+
+    <h3>Dashboard: <?= $data[2];?> <?= $data[3];?></h3>
+    <h3>Account ID: <?= $data[0];?>, Balance: $<?= $data[1];?></h3>
+    <br><br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Trans ID</th>
+            <th>Trans Type</th>
+            <th>Trans Amount $</th>
+            <th>Date Time of Trans</th>
+            <th>Description</th>
+            <th>Balance after transaction $</th>
+        </tr>
+        </thead>
+
+<!--Goes through all transactions and displays either red for negative amount or green for positive amount in column 3-->
+        <?php for ($i = 0; $i < count($data2); $i++) { ?>
+            <tr>
+            <?php for($j = 0; $j < 6; $j++) {
+                if($j == 2 && $data2[$i][2] < 0) {?>
+                    <td class="negative"><?= $data2[$i][$j] ?></td>
+            <?php } else if($j == 2 && $data2[$i][2] >= 0) { ?>
+                    <td class="positive"><?= $data2[$i][$j] ?></td>
+            <?php } else { ?>
+                    <td><?= $data2[$i][$j] ?></td>
+            <?php } }?>
+            </tr>
+       <?php } ?>
+    </table>
+    <a href="/../FirstNationalBank/login/dashboard/entertransaction/" name="enterTransaction" class="btn btn-default btn-trans" role="button">Enter Transaction</a>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

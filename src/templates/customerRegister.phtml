@@ -1,0 +1,59 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=<?= $linkTo('customerIndex'); ?>>First National Bank</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href=<?= $linkTo('customerIndex'); ?>>Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href=<?= $linkTo('customerLogin'); ?>><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <?= $fName = ""; $lName = ""; $dob = ""; $phone = ""; $email = ""; $pass1 = ""; $pass2 = ""; $deposit = ""?>
+    <h3>Sign Up:</h3>
+    <div class="container">
+        <form action="../create/" method="post">
+        <label>Required fields are marked with a *</label>
+            <div class="form-group">
+                <label>First Name: *</label>
+                <input type="text" class="form-control" name="firstName" required="required" value="<?=$fName?>">
+            </div>
+            <div class="form-group">
+                <label>Last Name: *</label>
+                <input type="text" class="form-control" name="lastName" required="required" value="<?=$lName?>">
+            </div>
+            <div class="form-group">
+                <label>Date of Birth: *</label>
+                <input type="text" class="form-control" name="dateOfBirth" required="required" value="<?=$dob?>">
+            </div>
+            <div class="form-group">
+                <label>Phone: *</label>
+                <input type="text" class="form-control" name="phone" required="required" value="<?=$phone?>">
+            </div>
+            <div class="form-group">
+                <label>Email Address: *</label>
+                <input type="email" class="form-control" name="eMail" required="required" value="<?=$email?>">
+            </div>
+            <div class="form-group">
+                <label>Password: *</label>
+                <input type="password" class="form-control" name="pass1" required="required" value="<?=$pass1?>">
+            </div>
+            <div class="form-group">
+               <label>Re enter Password: *</label>
+               <input type="password" class="form-control" name="pass2" required="required" value="<?=$pass2?>">
+            </div>
+            <div class="form-group">
+               <label>Initial deposit amount:</label>
+               <input type="number" class="form-control" name="deposit" value="<?=$deposit?>">
+            </div>
+            <button name="create" type="submit" class="btn btn-default">Register</button>
+        </form>
+    </div>
+
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

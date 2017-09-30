@@ -1,0 +1,121 @@
+/*
+	Kelly Pitts 09098321 & 
+	Ben Wilton 14262032
+*/
+body {
+    background-color: #e6e6ff;  /* blue/grey background */
+}
+
+/* adding margin to the left of headings and the transaction button */
+h3, .btn-trans {
+	margin-left: 1%; 
+}
+
+/* Center align headings on home page */
+h2 {
+	text-align: center;
+}
+
+/* Adding a border to the table elements on the dashboard page */
+table, tr, td {
+	border: solid;
+	border-collapse: collapse;
+}
+
+/* positioning the table so it is not the full width of the screen */
+table {
+	margin-left: 1%;
+	width: 98% !important;
+}
+
+/* overriding bootstraps style so the forms are closer to the left of the screen */
+.container {
+	margin-left: 0.5%;
+}
+
+/* overriding bootstraps style so input boxes are a set width */
+.form-control, input {
+	width: 220px;
+}
+
+/* overriding bootstraps style for the register and enter transactions pages */
+/* sets the input boxes next to the labels */
+.form-control:not(.notInline), input:not(.notInline) {
+	float: right;
+	margin-right: 65%;
+}
+
+/* Home page 3 columns */
+.main-div {
+	float: left;
+	width: 33%;
+}
+
+/* radio buttons on the enter ttransaction page */
+.withdraw, .deposit {
+	float: left;
+	clear: left;
+}
+
+/* had to add more margin to deposit radio button to line it up with withdraw */
+.deposit {
+	margin-right: 15px;
+}
+
+.radio {
+	width: 20%;
+}
+
+/* fixing the footer to the bottom of the screen */
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #222;
+	color: white;
+	text-align: center;
+}
+
+/* removing bootstraps border radius to navbar */
+.navbar {
+	border-radius: 0;
+}
+
+/* Adding top and bottom margin to footer */
+.p-footer {
+	margin: 10px 0;
+}
+
+/* Determining colour for negative values on dashboard */
+td[class="negative"] {
+	color: red;
+}
+
+/* Determining colour for positive values on dashboard */
+td[class="positive"] {
+	color: green;
+}
+
+/* styling home page list */
+ul:not(.nav) {
+	border: 3px outset;
+	border-radius: 10px;
+	margin: 0 4%;
+	height: 220px;
+}
+
+/* adding 2 columns to the middle list on home page */
+.two-columns {
+	column-count: 2;
+}
+
+/* adding padding to top of 2nd column on home page to align with first column */
+.pad {
+	padding-top: 10px;
+}
+
+/* adding space to lists on home page */
+.main-div ul li {
+	margin: 10px;
+}

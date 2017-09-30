@@ -1,0 +1,23 @@
+<?php include "header.phtml" ?>
+    <!---------- Body starts --------------->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=<?= $linkTo('customerIndex'); ?>>First National Bank</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href=<?= $linkTo('customerIndex'); ?>>Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href=<?= $linkTo('customerRegister'); ?>><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href=<?= $linkTo('customerLogin'); ?>><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <h3> <?= $data?> </h3>
+    </div>
+
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>
